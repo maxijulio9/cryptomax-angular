@@ -1,23 +1,75 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
 .container {
     background-color: rgb(6, 17, 33);
     padding: 20px;
 }
 .card {
-    display: flex;
-    flex-direction: column;
-    height: 100%; 
-    text-align: center;
-    
-  }
-  .card-body {
-    flex-grow: 1; 
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  background-color: #4a538827;
+  color: whitesmoke;
+  border: 0.3px solid #39d8d4;
+  box-shadow: 2px 2px 10px 1px #02f7ef54;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+
+}
+.card:hover{
+  border: 0.3px solid #5d00c7;
+  box-shadow: 4px 4px 50px 0.1px #4600c7;
+  transition-delay: 0.2s;
+}
+
+.card-body {
+  flex-grow: 1; 
+}
 
 .card img{
     width: 30%;
     height: 30%;
     margin: 0 auto; 
+}
+.list-group-item{
+  background-color: #0e0033c7;
+  color: whitesmoke;
+  text-align: start;
+  font-size: 16px;
+}
+
+
+
+.card-link {
+  
+  background-color: #39d8d4;
+  padding: 10px;
+  text-decoration: none;
+  color: #2f2c79;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  border-radius:6px ;
+     
+}
+.card-body-buttom{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  
+}
+
+.card-body-buttom  .card-link:hover{
+  background-color: #5308dfb4;
+  color:  #b8f7ff;
+  font-weight: bold;
+  transition-delay: 0.3s;
+  
 }
 
 .input-group input{
@@ -26,12 +78,14 @@
     box-shadow: none;
     border-bottom: 2px solid #39d8d38a;
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 20px;
     width: 80%;
 }
 .input-group input::placeholder{
     color: rgba(130, 175, 179, 0.667);
     font-style: italic; 
+    font-size: 16px;
+
   }
 .input-group input:focus{
     outline: none;

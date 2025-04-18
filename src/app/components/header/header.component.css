@@ -1,0 +1,11 @@
+.navbar a{
+    color: whitesmoke;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.navbar-brand{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
