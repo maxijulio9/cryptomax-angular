@@ -1,3 +1,60 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.container {
+    background-color: rgb(6, 17, 33);
+    padding: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    text-align: center;
+    
+  }
+  .card-body {
+    flex-grow: 1; 
+  }
+
+.card img{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto; 
+}
+
+.input-group input{
+    background-color: rgb(6, 17, 33);
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #39d8d38a;
+    color: whitesmoke;
+    font-size: 30px;
+    width: 80%;
+}
+.input-group input::placeholder{
+    color: rgba(130, 175, 179, 0.667);
+    font-style: italic; 
+  }
+.input-group input:focus{
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(6, 17, 33);
+    color: whitesmoke;
+    
+}
+.input-group button{
+    background-color: rgb(6, 17, 33);
+    border: none;
+    color: rgba(245, 245, 245, 0.612);
+    cursor: pointer;
+    border-bottom: 2px solid #39d8d38a;
+    width: 10%;
+}
+.input-group button:hover{
+    background-color: #39d8d375;
+    color: whitesmoke;
+    border-bottom: 2px solid #39d8d3;
+    transition: all 0.3s ease-in-out;
+}
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);

@@ -13,7 +13,7 @@ export class BodyComponent {
   ngOnInit() {
     setTimeout(() => {
       this.mostrarMensaje = true;  // Activa el mensaje después de 1 segundo
-    }, 1000);
+    }, 500);
   }
 
 }
