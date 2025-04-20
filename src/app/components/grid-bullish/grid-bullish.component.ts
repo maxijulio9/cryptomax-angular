@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-body',
+  selector: 'app-grid-bullish',
   imports: [],
-  templateUrl: './body.component.html',
-  styleUrl: './body.component.css'
+  templateUrl: './grid-bullish.component.html',
+  styleUrl: './grid-bullish.component.css'
 })
 
-export class BodyComponent {
+export class BullishComponent {
   mostrarMensaje : boolean = false;  // Al inicio, el mensaje está oculto
 
   ngOnInit() {

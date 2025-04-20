@@ -1,0 +1,40 @@
+.container{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+.card{
+    color: whitesmoke;
+  background: rgba(0, 0, 0, 0.562);
+  border-radius: 16px;
+  border: 1px solid rgba(78, 6, 161, 0.281); 
+  backdrop-filter: blur(5px); 
+  box-shadow: 0 0 20px rgba(41, 0, 138, 0.712);
+  animation: pulseShadow 5s infinite ease-in-out;
+}
+.btn{
+    color: rgba(245, 245, 245, 0.486);
+    border-bottom: 2px solid rgba(57, 0, 122, 0.26);    
+}
+
+.btn:hover{
+    color: rgba(245, 245, 245, 0.986);
+    border-bottom: 2px solid rgba(81, 2, 172, 0.86);    
+    transition: 1s;
+}
+.card-img-top{
+    filter: invert(1);
+}
+
+@keyframes pulseShadow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(78, 6, 161, 0.5),
+                  0 0 40px rgba(78, 6, 161, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(78, 6, 161, 0.8),
+                  0 0 60px rgba(78, 6, 161, 0.6);
+    }
+  }
