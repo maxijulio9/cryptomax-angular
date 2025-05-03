@@ -1,0 +1,20 @@
+.container {
+  background-color: rgb(6, 17, 33);
+  padding: 100px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #5c00c2;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(26, 160, 178, 0.27);
+}

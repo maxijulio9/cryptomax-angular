@@ -5,14 +5,15 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { BullishComponent } from "./components/grid-bullish/grid-bullish.component";
 import { CompaniesCarrouselComponent } from './components/companies-carrousel/companies-carrousel.component';
 import { MainOperationsComponent } from "./components/main-operations/main-operations.component";
+import {PortfolioComponent} from './components/portfolio/portfolio.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent,
-            FooterComponent,
-            BullishComponent,
-            CompaniesCarrouselComponent,
-            MainOperationsComponent],
+    FooterComponent,
+    BullishComponent,
+    CompaniesCarrouselComponent,
+    MainOperationsComponent, PortfolioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
