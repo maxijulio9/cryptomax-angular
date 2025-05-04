@@ -1,15 +1,34 @@
 .container {
   background-color: rgb(6, 17, 33);
   padding: 100px;
+  width: 100%;
+}
+.table{
+  width: 100%;
 }
 
+.container h1{
+  padding: 4%;
+  text-align: center;
+  font-family: "Arial Narrow";
+  font-size: 4rem;
+}
 table {
   font-family: arial, sans-serif;
+  background-color: rgb(6, 17, 33);
+
   border-collapse: collapse;
+  width: 100%;
+}
+table-responsive {
+  background-color: rgb(6, 17, 33);
+
+  font-family: arial, sans-serif;
   width: 100%;
 }
 
 td, th {
+
   border: 1px solid #5c00c2;
   text-align: left;
   padding: 8px;
@@ -17,4 +36,47 @@ td, th {
 
 tr:nth-child(even) {
   background-color: rgba(26, 160, 178, 0.27);
+}
+
+tr .btn{
+  color: white;
+  border-bottom: 2px solid #39d8d3;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+tr .btn.delete{
+  background-color: rgba(42, 1, 98, 0.09);
+}
+tr .btn.delete:hover{
+  background-color: rgba(70, 0, 21, 0.56);
+  color: #d98a8a;
+  border-bottom: 2px solid #8c0707;
+
+}
+
+tr .btn:hover{
+  color: #9c75d9;
+  border-bottom: 2px solid #33006b;
+  background-color: rgba(13, 0, 30, 0.65);
+}
+
+tr td .btn.add{
+  display: block;
+  margin: 0 auto;
+
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background-color: #1e293b;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }

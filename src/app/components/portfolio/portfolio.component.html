@@ -1,25 +1,122 @@
 <div class="container">
-  <table>
-    <tr>
-      <th>Symbol</th>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Blockchain</th>
-      <th>Market Capitalization</th>
-      <th>Current price</th>
-      <th>Use case</th>
-    </tr>
+  <h1>My Portfolio</h1>
 
-    <tr >
-      <td>a</td>
-      <td>a</td>
-      <td>a</td>
-      <td>a</td>
-      <td>a</td>
-      <td>a</td>
-      <td>a</td>
-    </tr>
+  <form (ngSubmit)="onSubmit()" #criptoForm="ngForm">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Blockchain</th>
+          <th>Market Capitalization</th>
+          <th>Current Price</th>
+          <th>Use Case</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cripto of cryptos; let i = index">
+          <td>{{ cripto.symbol }}</td>
+          <td>{{ cripto.name }}</td>
+          <td>{{ cripto.category }}</td>
+          <td>{{ cripto.blockchain }}</td>
+          <td>{{ cripto.marketCap }}</td>
+          <td>{{ cripto.currentPrice }}</td>
+          <td>{{ cripto.useCase }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="editCripto(i)">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-danger" (click)="deleteCripto(i)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
 
-  </table>
+        <tr>
+          <td>
+            <input
+              type="text"
+              name="symbol"
+              [(ngModel)]="newCripto.symbol"
+              placeholder="Symbol"
+              class="form-control"
+              required
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="newCripto.name"
+              placeholder="Name"
+              class="form-control"
+              required
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="category"
+              [(ngModel)]="newCripto.category"
+              placeholder="Category"
+              class="form-control"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="blockchain"
+              [(ngModel)]="newCripto.blockchain"
+              placeholder="Blockchain"
+              class="form-control"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="marketCap"
+              [(ngModel)]="newCripto.marketCap"
+              placeholder="Market Cap"
+              class="form-control"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="currentPrice"
+              [(ngModel)]="newCripto.currentPrice"
+              placeholder="Current Price"
+              class="form-control"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="useCase"
+              [(ngModel)]="newCripto.useCase"
+              placeholder="Use Case"
+              class="form-control"
+            />
+          </td>
+          <td class="actions-cell">
+            <button type="submit" class="btn btn-success">
+              {{ editingIndex === -1 ? '+' : '✓' }}
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              (click)="cancelEdit()"
+              *ngIf="editingIndex !== -1"
+            >
+              ✕
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
 </div>
-

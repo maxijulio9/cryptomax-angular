@@ -2,7 +2,11 @@
     background-color: rgb(6, 17, 33);
     padding: 20px;
 }
-
+.lead{
+  font-family: "Arial Narrow";
+  font-size: 1.5rem;
+  color: rgba(169, 169, 169, 0.62);
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -36,7 +40,7 @@
     margin: 0 auto;
 }
 .list-group-item{
-  background-color: #0e0033c7;
+  background-color: rgba(4, 0, 12, 0.32);
   color: whitesmoke;
   text-align: start;
   font-size: 16px;

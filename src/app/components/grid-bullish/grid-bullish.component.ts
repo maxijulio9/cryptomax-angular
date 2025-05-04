@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class BullishComponent {
-  mostrarMensaje : boolean = false;  // Al inicio, el mensaje está oculto
+  mostrarMensaje : boolean = false;
 
   ngOnInit() {
     setTimeout(() => {
-      this.mostrarMensaje = true;  // Activa el mensaje después de 1 segundo
+      this.mostrarMensaje = true;
     }, 500);
   }
 
