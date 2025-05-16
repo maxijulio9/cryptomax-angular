@@ -1,3 +1,144 @@
+
+<div *ngFor="let a of criptos">{{ a.name }}</div>
+
+<div class="container">
+  <form #criptoForm="ngForm" (ngSubmit)="onSubmit(criptoForm)">
+    <div class="form-group">
+      <input type="hidden" name="id" [(ngModel)]="selectedCripto.id">
+
+      
+      <label for="symbol">Symbol:</label>
+      <input type="text" id="symbol" name="symbol"
+             [(ngModel)]="selectedCripto.symbol" #symbol="ngModel"
+             required class="form-control"
+             [class.is-invalid]="symbol.invalid && symbol.touched">
+      @if (symbol.invalid && symbol.touched) {
+        <div class="invalid-feedback">
+          @if (symbol.errors?.['required']) {
+            The symbol is required. Enter a valid symbol.
+          }
+        </div>
+      }
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"
+             [(ngModel)]="selectedCripto.name" #name="ngModel"
+             required class="form-control"
+             [class.is-invalid]="name.invalid && name.touched">
+      @if (name.invalid && name.touched) {
+        <div class="invalid-feedback">
+          @if (name.errors?.['required']) {
+            The name is required. Enter a valid name.
+          }
+        </div>
+      }
+
+
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category"
+             [(ngModel)]="selectedCripto.category" #category="ngModel"
+             required pattern="^\d{7,8}$" class="form-control"
+             [class.is-invalid]="category.invalid && category.touched">
+      @if (category.invalid && category.touched) {
+        <div class="invalid-feedback">
+          @if (category.errors?.['required']) {
+            The category is required. 
+          }
+        </div>
+      }
+
+      <label for="blockchain">blockchain:</label>
+      <input type="blockchain" id="blockchain" name="blockchain"
+             [(ngModel)]="selectedCripto.blockchain" #blockchain="ngModel"
+             blockchain class="form-control"
+             [class.is-invalid]="blockchain.invalid && blockchain.touched">
+    
+
+
+      <label for="marketCapitalization">Market Capitalization:</label>
+      <input type="text" id="marketCapitalization" name="marketCapitalization"
+             [(ngModel)]="selectedCripto.marketCapitalization" #marketCapitalization="ngModel"
+             required class="form-control"
+             [class.is-invalid]="marketCapitalization.invalid && marketCapitalization.touched">
+      @if (marketCapitalization.invalid && marketCapitalization.touched) {
+        <div class="invalid-feedback">
+          @if (marketCapitalization.errors?.['required']) {
+            The market capitalization is required. Add NN if you don't have it.
+          }
+        </div>
+      }
+
+      <label for="currentPrice">Current Price:</label>
+      <input type="currentPrice" id="currentPrice" name="currentPrice"
+             [(ngModel)]="selectedCripto.currentPrice" #currentPrice="ngModel"
+             required currentPrice class="form-control"
+             [class.is-invalid]="currentPrice.invalid && currentPrice.touched">
+      @if (currentPrice.invalid && currentPrice.touched) {
+        <div class="invalid-feedback">
+          @if (currentPrice.errors?.['required']) {
+            At least add an estimated price if you don't have it.
+          } 
+        </div>
+      }
+
+      <label for="useCase">Use Case:</label>
+      <input type="useCase" id="useCase" name="useCase"
+             [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
+             useCase class="form-control"
+             [class.is-invalid]="useCase.invalid && useCase.touched">
+
+
+      <div class="button-group">
+        <button type="submit" [disabled]="criptoForm.invalid" class="btn btn-primary">
+          @if (selectedCripto.id) {
+            Update
+          } @else {
+            Add
+          }
+        </button>
+        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary">Cancell</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Students table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+         <th>Symbol</th>
+         <th>Name</th>
+          <th>Category</th>
+          <th>Blockchain</th>
+          <th>Market Capitalization</th>
+          <th>Current Price</th>
+          <th>Use Case</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (a of criptos; track a.id) {
+        <tr>
+          <td>{{ a.id }}</td>
+          <td>{{ a.symbol }}</td>
+          <td>{{ a.name }}</td>
+          <td>{{ a.category }}</td>
+          <td>{{ a.blockchain }}</td>
+          <td>{{ a.marketCapitalization }}</td>
+          <td>{{ a.currentPrice }}</td>
+          <td>{{ a.useCase }}</td>
+          <td>
+            <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
+            <button (click)="deleteCripto(a.id)" class="btn btn-sm btn-danger"> ✕</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<!-- 
+
 <div class="container">
   <h1>My Portfolio</h1>
 
@@ -119,4 +260,4 @@
       </table>
     </div>
   </form>
-</div>
+</div> -->
