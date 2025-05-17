@@ -1,5 +1,6 @@
 
 <div class="container">
+  <h1>My Portfolio</h1>
   <form #criptoForm="ngForm" (ngSubmit)="onSubmit(criptoForm)">
     <div class="form-group">
       <input type="hidden" name="id" [(ngModel)]="selectedCripto.id">
@@ -9,7 +10,7 @@
       <input type="text" id="symbol" name="symbol"
              [(ngModel)]="selectedCripto.symbol" #symbol="ngModel"
              required class="form-control"
-             [class.is-invalid]="symbol.invalid && symbol.touched">
+             [class.is-invalid]="symbol.invalid && symbol.touched" >
       @if (symbol.invalid && symbol.touched) {
         <div class="invalid-feedback">
           @if (symbol.errors?.['required']) {
@@ -26,7 +27,7 @@
       @if (name.invalid && name.touched) {
         <div class="invalid-feedback">
           @if (name.errors?.['required']) {
-            The name is required. Enter a valid name.
+            The name is required. 
           }
         </div>
       }
@@ -48,8 +49,7 @@
       <label for="blockchain">blockchain:</label>
       <input type="blockchain" id="blockchain" name="blockchain"
              [(ngModel)]="selectedCripto.blockchain" #blockchain="ngModel"
-             blockchain class="form-control"
-             [class.is-invalid]="blockchain.invalid && blockchain.touched">
+             blockchain class="form-control">
     
 
 
@@ -82,8 +82,7 @@
       <label for="useCase">Use Case:</label>
       <input type="useCase" id="useCase" name="useCase"
              [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
-             useCase class="form-control"
-             [class.is-invalid]="useCase.invalid && useCase.touched">
+             useCase class="form-control">
 
 
       <div class="button-group">
@@ -94,7 +93,7 @@
             Add
           }
         </button>
-        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary m-4">Cancell</button>
+        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary m-4">Cancel</button>
       </div>
     </div>
   </form>
@@ -127,7 +126,7 @@
           <td>{{ a.useCase }}</td>
           <td>
             <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
-            <button (click)="deleteCripto(a.id)" class="btn btn-sm">✕</button>
+            <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>
           </td>
         </tr>
       }

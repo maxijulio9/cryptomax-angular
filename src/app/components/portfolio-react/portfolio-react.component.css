@@ -16,9 +16,12 @@
 table {
   font-family: arial, sans-serif;
   background-color: rgb(6, 17, 33);
-
-  border-collapse: collapse;
   width: 100%;
+}
+thead {
+  background-color: #3a008579;
+  color: white;
+  
 }
 table-responsive {
   background-color: rgb(6, 17, 33);
@@ -28,7 +31,6 @@ table-responsive {
 }
 
 td, th {
-
   border: 1px solid #5c00c2;
   text-align: left;
   padding: 8px;
@@ -39,7 +41,7 @@ tr:nth-child(even) {
 }
 
 tr .btn{
-  color: white;
+  color: rgba(255, 255, 255, 0.76);
   border-bottom: 2px solid #39d8d3;
   margin-left: 20px;
   margin-top: 10px;
@@ -50,7 +52,7 @@ tr .btn.delete{
 tr .btn.delete:hover{
   background-color: rgba(70, 0, 21, 0.56);
   color: #d98a8a;
-  border-bottom: 2px solid #fa1515;
+  border-bottom: 2px solid #d10000;
 
 }
 

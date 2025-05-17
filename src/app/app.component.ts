@@ -6,6 +6,7 @@ import { BullishComponent } from "./components/grid-bullish/grid-bullish.compone
 import { CompaniesCarrouselComponent } from './components/companies-carrousel/companies-carrousel.component';
 import { MainOperationsComponent } from "./components/main-operations/main-operations.component";
 import {PortfolioComponent} from './components/portfolio/portfolio.component';
+import { PortfolioReactComponent } from "./components/portfolio-react/portfolio-react.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import {PortfolioComponent} from './components/portfolio/portfolio.component';
     FooterComponent,
     BullishComponent,
     CompaniesCarrouselComponent,
-    MainOperationsComponent, PortfolioComponent],
+    MainOperationsComponent, PortfolioComponent, PortfolioReactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
