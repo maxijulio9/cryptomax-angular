@@ -1,6 +1,4 @@
 
-<div *ngFor="let a of criptos">{{ a.name }}</div>
-
 <div class="container">
   <form #criptoForm="ngForm" (ngSubmit)="onSubmit(criptoForm)">
     <div class="form-group">
@@ -37,7 +35,7 @@
       <label for="category">Category:</label>
       <input type="text" id="category" name="category"
              [(ngModel)]="selectedCripto.category" #category="ngModel"
-             required pattern="^\d{7,8}$" class="form-control"
+             required  class="form-control"
              [class.is-invalid]="category.invalid && category.touched">
       @if (category.invalid && category.touched) {
         <div class="invalid-feedback">
@@ -89,14 +87,14 @@
 
 
       <div class="button-group">
-        <button type="submit" [disabled]="criptoForm.invalid" class="btn btn-primary">
+        <button type="submit" [disabled]="criptoForm.invalid" class="btn  btn-primary m-4">
           @if (selectedCripto.id) {
             Update
           } @else {
             Add
           }
         </button>
-        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary">Cancell</button>
+        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary m-4">Cancell</button>
       </div>
     </div>
   </form>
@@ -128,8 +126,8 @@
           <td>{{ a.currentPrice }}</td>
           <td>{{ a.useCase }}</td>
           <td>
-            <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
-            <button (click)="deleteCripto(a.id)" class="btn btn-sm btn-danger"> ✕</button>
+            <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
+            <button (click)="deleteCripto(a.id)" class="btn btn-sm">✕</button>
           </td>
         </tr>
       }

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Injectable } from '@angular/core';
+import { CriptoService } from '../../service/critpto-service.service';
 
 interface Cripto {
   id: number;
@@ -24,18 +26,8 @@ export class PortfolioComponent {
 
 
 
-  criptos: Cripto[] = [
-    {
-    id : 1,
-    symbol: 'BTC',
-    name: 'Bitcoin',
-    category: 'Cryptocurrency',
-    blockchain: 'Bitcoin',
-    marketCapitalization: '800 billion',
-    currentPrice: 104000,
-    useCase: 'Digital Gold',
-    }
-  ];
+  private readonly criptoService: CriptoService =  inject( CriptoService);
+  criptos: Cripto[] = []
 
 
   selectedCripto: Cripto = {
@@ -53,21 +45,22 @@ export class PortfolioComponent {
     this.loadCriptos();
   }
 
-  loadCriptos(): Cripto[]{
-    return this.criptos;
-    
+  
+  loadCriptos() {
+    this.criptos = this.criptoService.getCriptos();
   }
 
 
   onSubmit(form: NgForm) {
     if (form.valid) {
       if (this.selectedCripto.id) {
-        this.updateCripto(this.selectedCripto);
+        this.criptoService.updateCripto(this.selectedCripto);
       } else {
         const newCripto = this.selectedCripto;
         newCripto.id = this.generateId() ;
-        this.addCripto(newCripto);
+        this.criptoService.addCripto(newCripto);
       }
+      
       this.loadCriptos();
       this.resetForm(form);
 
@@ -86,11 +79,30 @@ export class PortfolioComponent {
       currentPrice: 0,
       useCase: '',
     };
+
+    if (form) {
+      form.resetForm(this.selectedCripto);
+      form.form.markAsPristine();
+      form.form.markAsUntouched();
+    }
   }
    
     
   deleteCripto(id: number) {
-    this.criptos = this.criptos.filter(cripto => cripto.id !== id);
+    this.criptoService.deleteCripto(id);
+  }
+
+   addCripto(newCripto: Cripto) {
+    this.criptoService.addCripto(newCripto);
+  }
+
+  updateCripto(cripto: Cripto , form?: NgForm) {
+    this.selectedCripto = cripto;
+   this.criptoService.updateCripto(cripto);
+   if (form) {
+     form.form.markAsPristine();
+      form.form.markAsUntouched();
+   }
   }
   
   private generateId(): number {
@@ -100,16 +112,7 @@ export class PortfolioComponent {
   }
 
 
-  addCripto(newCripto: Cripto) {
-    this.criptos.push(newCripto);
-  }
-
-  updateCripto(cripto: Cripto , form?: NgForm) {
-    const index = this.criptos.findIndex(c => c.id === cripto.id);
-    if (index !== -1) {
-      this.criptos[index] = cripto;
-    }
-  }
+ 
 
 
   // cryptos: Cripto[] = [];
