@@ -3,8 +3,8 @@ export interface Cripto {
   symbol: string;
   name: string;
   category: string;
-  blockchain: string;
+  blockchain?: string;
   marketCapitalization: string;
-  currentPrice: number;
-  useCase: string;
+  currentPrice?: number;
+  useCase?: string;
 }

@@ -23,10 +23,10 @@ export class PortfolioReactComponent {
       symbol: ['', Validators.required],
       name: ['', Validators.required],
       category: ['', Validators.required],
-      blockchain: [''],
+      blockchain: [null],
       marketCapitalization: ['', Validators.required],
-      currentPrice: [0, Validators.required],
-      useCase: ['']
+      currentPrice: [0],
+      useCase: [null]
     });
     this.loadCriptos();
   }
@@ -43,8 +43,9 @@ export class PortfolioReactComponent {
         this.criptoService.updateCripto(cripto);
       } else {
         const newCripto = { ...cripto, id: this.generateId() };
-        this.criptoService.addCripto(cripto);
+        this.criptoService.addCripto(newCripto);
       }
+      
       this.loadCriptos();
       this.resetForm();
     }

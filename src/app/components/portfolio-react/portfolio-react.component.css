@@ -15,12 +15,14 @@
 }
 table {
   font-family: arial, sans-serif;
-  background-color: rgb(6, 17, 33);
+  background-color: rgba(214, 164, 238, 0.185);
+  color: rgb(255, 255, 255);
+  border-collapse: collapse;
   width: 100%;
 }
 thead {
-  background-color: #3a008579;
-  color: white;
+  background-color:rgba(53, 0, 73, 0.836);
+  color: rgba(233, 199, 255, 0.89);
   
 }
 table-responsive {
@@ -31,17 +33,18 @@ table-responsive {
 }
 
 td, th {
+
   border: 1px solid #5c00c2;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: rgba(26, 160, 178, 0.27);
+  background-color: rgba(26, 160, 178, 0.466);
 }
 
 tr .btn{
-  color: rgba(255, 255, 255, 0.76);
+  color: white;
   border-bottom: 2px solid #39d8d3;
   margin-left: 20px;
   margin-top: 10px;
@@ -50,18 +53,17 @@ tr .btn.delete{
   background-color: rgba(42, 1, 98, 0.09);
 }
 tr .btn.delete:hover{
-  background-color: rgba(70, 0, 21, 0.56);
-  color: #d98a8a;
-  border-bottom: 2px solid #d10000;
+  background-color: rgba(177, 0, 53, 0.801);
+  color: #dda2a2;
+  border-bottom: 2px solid #fa1515;
 
 }
 
 tr .btn:hover{
-  color: #9c75d9;
-  border-bottom: 2px solid #33006b;
-  background-color: rgba(13, 0, 30, 0.65);
+  color: #c5a9f1;
+  border-bottom: 2px solid #7e05ff;
+  background-color: rgba(34, 0, 78, 0.74);
 }
-
 tr td .btn.add{
   display: block;
   margin: 0 auto;
@@ -89,7 +91,20 @@ input:focus {
   box-shadow: 0 0 10px rgba(115, 3, 243, 0.897);
 }
 
-
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background-color: #1e293b;
+  color: white;
+  font-size: 1rem;
+}
+textarea:focus {
+  background-color: #1e293b !important;
+  color: white !important;
+  border: 1px solidrgba(115, 3, 243, 0.897);
+}
 
 form {
   display: flex;
@@ -116,6 +131,6 @@ form {
 }
 
 .btn-secondary {
-  background-color: #0076a5b6 !important;
+  background-color: #df00383d !important;
 
 }

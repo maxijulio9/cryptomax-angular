@@ -4,16 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { CriptoService } from '../../service/critpto-service.service';
 
-interface Cripto {
-  id: number;
-  symbol: string;
-  name: string;
-  category: string;
-  blockchain: string;
-  marketCapitalization: string;
-  currentPrice: number;
-  useCase: string;
-}
+import { Cripto } from '../../modelo/cripto';
 
 @Component({
   selector: 'app-portfolio',

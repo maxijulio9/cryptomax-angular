@@ -53,8 +53,9 @@
           </div>
         }
 
-        <label for="currentPrice" class="form-label">Current Price:</label>
-        <input type="text" id="currentPrice" formControlName="currentPrice" class="form-control"
+        
+        <label for="currentPrice" class="form-label">Current Price(USD):</label>
+        <input type="number" id="currentPrice" formControlName="currentPrice" class="form-control"
                [ngClass]="{'is-invalid': criptoForm.get('currentPrice')?.invalid && criptoForm.get('currentPrice')?.touched}">
         @if (criptoForm.get('currentPrice')?.invalid && criptoForm.get('currentPrice')?.touched) {
           <div class="invalid-feedback">
@@ -65,7 +66,7 @@
         }
 
         <label for="useCase" class="form-label">Use Case:</label>
-        <input type="text" id="useCase" formControlName="useCase" class="form-control">
+        <textarea id="useCase" formControlName="useCase" class="form-control" rows="3"></textarea>
 
 
         <div class="button-group">
@@ -113,5 +114,86 @@
             </tr>
         }
         </tbody>
+        <!-- <tr>
+            <td><input type="text" id="symbol" formControlName="symbol" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('symbol')?.invalid && criptoForm.get('symbol')?.touched}">
+                @if (criptoForm.get('symbol')?.invalid && criptoForm.get('symbol')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('symbol')?.errors?.['required']) {
+                        The symbol is required. Enter a valid symbol.
+                    }
+                </div>
+                }
+            </td>
+            <td><input type="text" id="name" formControlName="name" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched}">
+                @if (criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('name')?.errors?.['required']) {
+                        The name is required. 
+                    }
+                </div>
+                }
+            </td>
+            <td><input type="text" id="category" formControlName="category" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('category')?.invalid && criptoForm.get('category')?.touched}">
+                @if (criptoForm.get('category')?.invalid && criptoForm.get('category')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('category')?.errors?.['required']) {
+                        The category is required.
+                    }
+                </div>
+                }
+            </td>
+            <td><input type="text" id="blockchain" formControlName="blockchain" class="form-control"></td>
+            <td><input type="text" id="marketCapitalization" formControlName="marketCapitalization" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('marketCapitalization')?.invalid && criptoForm.get('marketCapitalization')?.touched}">
+                @if (criptoForm.get('marketCapitalization')?.invalid && criptoForm.get('marketCapitalization')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('marketCapitalization')?.errors?.['required']) {
+                        The market capitalization is required. Add NN if you don't have it.
+                    }
+                </div>
+                }
+            </td>
+            <td><input type="text" id="currentPrice" formControlName="currentPrice" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('currentPrice')?.invalid && criptoForm.get('currentPrice')?.touched}">
+                @if (criptoForm.get('currentPrice')?.invalid && criptoForm.get('currentPrice')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('currentPrice')?.errors?.['required']) {
+                        At least add an estimated price if you don't have it.
+                    }
+                </div>
+                }
+            </td>
+
+            
+            <td><input type="text" id="marketCapitalization" formControlName="marketCapitalization" class="form-control"
+               [ngClass]="{'is-invalid': criptoForm.get('marketCapitalization')?.invalid && criptoForm.get('marketCapitalization')?.touched}">
+                @if (criptoForm.get('marketCapitalization')?.invalid && criptoForm.get('marketCapitalization')?.touched) {
+                <div class="invalid-feedback">
+                    @if (criptoForm.get('marketCapitalization')?.errors?.['required']) {
+                        At least add an estimated if you don't have it.
+                    }
+                </div>
+                }     
+            </td>
+            <td><input type="text" id="useCase" formControlName="useCase" class="form-control"></td>    
+
+            <td>
+                <button type="submit" [disabled]="criptoForm.invalid" class="btn btn-primary m-4">
+                    @if (criptoForm.get('id')?.value) {
+                        Update
+                    } @else {
+                        Add
+                    }
+                </button>
+                <button type="button" (click)="resetForm()" class="btn btn-secondary m-4">Cancel</button>   
+            </td>      
+
+        </tr>
+
+ -->
+
     </table>
   </div>

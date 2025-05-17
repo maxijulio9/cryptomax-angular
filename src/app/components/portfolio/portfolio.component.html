@@ -66,8 +66,8 @@
         </div>
       }
 
-      <label for="currentPrice">Current Price:</label>
-      <input type="currentPrice" id="currentPrice" name="currentPrice"
+      <label for="currentPrice">Current Price(USD):</label>
+      <input type="number" id="currentPrice" name="currentPrice"
              [(ngModel)]="selectedCripto.currentPrice" #currentPrice="ngModel"
              required currentPrice class="form-control"
              [class.is-invalid]="currentPrice.invalid && currentPrice.touched">
@@ -80,9 +80,12 @@
       }
 
       <label for="useCase">Use Case:</label>
-      <input type="useCase" id="useCase" name="useCase"
+      <textarea id="useCase" name="useCase"
+                [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
+                useCase class="form-control" rows="3"></textarea>
+      <!-- <input type="useCase" id="useCase" name="useCase"
              [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
-             useCase class="form-control">
+             useCase class="form-control"> -->
 
 
       <div class="button-group">
