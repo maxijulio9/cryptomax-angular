@@ -1,140 +1,151 @@
+<div class="container my-4">
+  <h1 class="text-center mb-4">My Template Driven Portfolio</h1>
 
-<div class="container">
-  <h1>My Portfolio</h1>
   <form #criptoForm="ngForm" (ngSubmit)="onSubmit(criptoForm)">
-    <div class="form-group">
-      <input type="hidden" name="id" [(ngModel)]="selectedCripto.id">
+    <div class="row">
+      <input type="hidden" name="id" [(ngModel)]="selectedCripto.id" />
 
-      
-      <label for="symbol">Symbol:</label>
-      <input type="text" id="symbol" name="symbol"
-             [(ngModel)]="selectedCripto.symbol" #symbol="ngModel"
-             required class="form-control"
-             [class.is-invalid]="symbol.invalid && symbol.touched" >
-      @if (symbol.invalid && symbol.touched) {
-        <div class="invalid-feedback">
-          @if (symbol.errors?.['required']) {
-            The symbol is required. Enter a valid symbol.
-          }
-        </div>
-      }
+      <div class="col-12 mb-3">
+        <label for="symbol">Symbol:</label>
+        <input type="text" id="symbol" name="symbol"
+               [(ngModel)]="selectedCripto.symbol" #symbol="ngModel"
+               required class="form-control"
+               [class.is-invalid]="symbol.invalid && symbol.touched">
+        @if (symbol.invalid && symbol.touched) {
+          <div class="invalid-feedback">
+            @if (symbol.errors?.['required']) {
+              The symbol is required. Enter a valid symbol.
+            }
+          </div>
+        }
+      </div>
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"
-             [(ngModel)]="selectedCripto.name" #name="ngModel"
-             required class="form-control"
-             [class.is-invalid]="name.invalid && name.touched">
-      @if (name.invalid && name.touched) {
-        <div class="invalid-feedback">
-          @if (name.errors?.['required']) {
-            The name is required. 
-          }
-        </div>
-      }
+      <div class="col-12 mb-3">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"
+               [(ngModel)]="selectedCripto.name" #name="ngModel"
+               required class="form-control"
+               [class.is-invalid]="name.invalid && name.touched">
+        @if (name.invalid && name.touched) {
+          <div class="invalid-feedback">
+            @if (name.errors?.['required']) {
+              The name is required.
+            }
+          </div>
+        }
+      </div>
 
+      <div class="col-12 mb-3">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category"
+               [(ngModel)]="selectedCripto.category" #category="ngModel"
+               required class="form-control"
+               [class.is-invalid]="category.invalid && category.touched">
+        @if (category.invalid && category.touched) {
+          <div class="invalid-feedback">
+            @if (category.errors?.['required']) {
+              The category is required.
+            }
+          </div>
+        }
+      </div>
 
-      <label for="category">Category:</label>
-      <input type="text" id="category" name="category"
-             [(ngModel)]="selectedCripto.category" #category="ngModel"
-             required  class="form-control"
-             [class.is-invalid]="category.invalid && category.touched">
-      @if (category.invalid && category.touched) {
-        <div class="invalid-feedback">
-          @if (category.errors?.['required']) {
-            The category is required. 
-          }
-        </div>
-      }
+      <div class="col-12 mb-3">
+        <label for="blockchain">Blockchain:</label>
+        <input type="text" id="blockchain" name="blockchain"
+               [(ngModel)]="selectedCripto.blockchain" #blockchain="ngModel"
+               blockchain class="form-control">
+      </div>
 
-      <label for="blockchain">blockchain:</label>
-      <input type="blockchain" id="blockchain" name="blockchain"
-             [(ngModel)]="selectedCripto.blockchain" #blockchain="ngModel"
-             blockchain class="form-control">
-    
+      <div class="col-12 mb-3">
+        <label for="marketCapitalization">Market Capitalization:</label>
+        <input type="text" id="marketCapitalization" name="marketCapitalization"
+               [(ngModel)]="selectedCripto.marketCapitalization" #marketCapitalization="ngModel"
+               required class="form-control"
+               [class.is-invalid]="marketCapitalization.invalid && marketCapitalization.touched">
+        @if (marketCapitalization.invalid && marketCapitalization.touched) {
+          <div class="invalid-feedback">
+            @if (marketCapitalization.errors?.['required']) {
+              The market capitalization is required. Add NN if you don't have it.
+            }
+          </div>
+        }
+      </div>
 
+      <div class="col-12 mb-3">
+        <label for="currentPrice">Current Price (USD):</label>
+        <input type="number" id="currentPrice" name="currentPrice"
+               [(ngModel)]="selectedCripto.currentPrice" #currentPrice="ngModel"
+               required currentPrice class="form-control"
+               [class.is-invalid]="currentPrice.invalid && currentPrice.touched">
+        @if (currentPrice.invalid && currentPrice.touched) {
+          <div class="invalid-feedback">
+            @if (currentPrice.errors?.['required']) {
+              At least add an estimated price if you don't have it.
+            }
+          </div>
+        }
+      </div>
 
-      <label for="marketCapitalization">Market Capitalization:</label>
-      <input type="text" id="marketCapitalization" name="marketCapitalization"
-             [(ngModel)]="selectedCripto.marketCapitalization" #marketCapitalization="ngModel"
-             required class="form-control"
-             [class.is-invalid]="marketCapitalization.invalid && marketCapitalization.touched">
-      @if (marketCapitalization.invalid && marketCapitalization.touched) {
-        <div class="invalid-feedback">
-          @if (marketCapitalization.errors?.['required']) {
-            The market capitalization is required. Add NN if you don't have it.
-          }
-        </div>
-      }
+      <div class="col-12 mb-4">
+        <label for="useCase">Use Case:</label>
+        <textarea id="useCase" name="useCase"
+                  [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
+                  useCase class="form-control" rows="3"></textarea>
+      </div>
 
-      <label for="currentPrice">Current Price(USD):</label>
-      <input type="number" id="currentPrice" name="currentPrice"
-             [(ngModel)]="selectedCripto.currentPrice" #currentPrice="ngModel"
-             required currentPrice class="form-control"
-             [class.is-invalid]="currentPrice.invalid && currentPrice.touched">
-      @if (currentPrice.invalid && currentPrice.touched) {
-        <div class="invalid-feedback">
-          @if (currentPrice.errors?.['required']) {
-            At least add an estimated price if you don't have it.
-          } 
-        </div>
-      }
-
-      <label for="useCase">Use Case:</label>
-      <textarea id="useCase" name="useCase"
-                [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
-                useCase class="form-control" rows="3"></textarea>
-      <!-- <input type="useCase" id="useCase" name="useCase"
-             [(ngModel)]="selectedCripto.useCase" #useCase="ngModel"
-             useCase class="form-control"> -->
-
-
-      <div class="button-group">
-        <button type="submit" [disabled]="criptoForm.invalid" class="btn  btn-primary m-4">
+      <div class="col-12 d-flex justify-content-start gap-3 mb-4">
+        <button type="submit" [disabled]="criptoForm.invalid" class="btn btn-primary">
           @if (selectedCripto.id) {
             Update
           } @else {
             Add
           }
         </button>
-        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary m-4">Cancel</button>
+        <button type="button" (click)="resetForm(criptoForm)" class="btn btn-secondary">Cancel</button>
       </div>
     </div>
   </form>
 
-  <!-- Students table -->
-  <table>
-    <thead>
-      <tr>
-        <th>Id</th>
-         <th>Symbol</th>
-         <th>Name</th>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table">
+        <tr>
+          <th>Id</th>
+          <th>Symbol</th>
+          <th>Name</th>
           <th>Category</th>
           <th>Blockchain</th>
           <th>Market Capitalization</th>
           <th>Current Price</th>
           <th>Use Case</th>
           <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (a of criptos; track a.id) {
-        <tr>
-          <td>{{ a.id }}</td>
-          <td>{{ a.symbol }}</td>
-          <td>{{ a.name }}</td>
-          <td>{{ a.category }}</td>
-          <td>{{ a.blockchain }}</td>
-          <td>{{ a.marketCapitalization }}</td>
-          <td>{{ a.currentPrice }}</td>
-          <td>{{ a.useCase }}</td>
-          <td>
-            <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
-            <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>
-          </td>
         </tr>
-      }
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        @for (a of criptos; track a.id) {
+          <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.symbol }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.category }}</td>
+            <td>{{ a.blockchain }}</td>
+            <td>{{ a.marketCapitalization }}</td>
+            <td>{{ a.currentPrice }}</td>
+            <td>{{ a.useCase }}</td>
+            <td>
+              <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm btn-primary me-1">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button (click)="deleteCripto(a.id)" class="btn btn-sm btn-secondary">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <!-- 

@@ -1,3 +1,12 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { PortfolioReactComponent } from './components/portfolio-react/portfolio-react.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
-export const routes: Routes = [];
+
+export const routes: Routes = [
+    { path: '', component: HomepageComponent },
+    {path: 'portfolio-react', component: PortfolioReactComponent},
+    {path:'portfolio', component: PortfolioComponent}
+
+];

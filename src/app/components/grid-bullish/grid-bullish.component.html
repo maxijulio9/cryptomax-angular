@@ -1,135 +1,59 @@
-
 <div class="container py-5" [class.fade-in]="mostrarMensaje">
-    <div class="jumbotron text-center" >
-      <h1 class="display-3 display-lg-1  mt-5 mb-3 mb-lg-4">The Most Attractive <i class="fw-bold">Cryptocurrencies</i> in 2025</h1>
-      <p class="lead">These are the most bullish cryptocurrencies of the year!🚀</p>
+  <div class="jumbotron text-center">
+    <h1 class="display-3 display-lg-1 mt-5 mb-3 mb-lg-4">
+      The Most Attractive <i class="fw-bold">Cryptocurrencies</i> in 2025
+    </h1>
+    <p class="lead">These are the most bullish cryptocurrencies of the year!🚀</p>
+  </div>
+</div>
+
+<div class="container mb-5 ">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <form class="input-group input-group-lg" (submit)="onSubmit($event)">
+        <input
+          type="text"
+          class="form-control py-3 fs-4"
+          placeholder="Enter the cryptocurrency name or symbol"
+          [(ngModel)]="searchCripto"
+          name="cryptoSearch"
+        />
+        <button class="btn btn-primary px-4" type="submit">
+          <i class="bi bi-search fs-3"></i>
+        </button>
+      </form>
     </div>
   </div>
+</div>
 
-  <div class="container mb-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
-        <form class="input-group input-group-lg " id="cryptoSearchForm">
-          <input type="text" class="form-control py-3 fs-4" placeholder="Enter the cryptocurrency name or symbol" id="nameTokenInput">
-          <button class="btn btn-primary  px-4" type="submit">
-            <i class="bi bi-search fs-3"></i>
-          </button>
-        </form>
+<div class="container py-5 ">
+  <div class="row g-4" id="principalCards">
+    <div
+      class="col-lg-4 col-md-6 col-sm-12"
+      *ngFor="let cripto of filteredCriptos">
+      <div class="card">
+        <img [src]="cripto.img" class="img-fluid" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ cripto.title }}</h5>
+          <p class="card-text">{{ cripto.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Initial Price: <strong>{{ cripto.initialPrice }}</strong>
+          </li>
+          <li class="list-group-item">
+            Highest price ever: <strong>{{ cripto.maxPrice }}</strong>
+          </li>
+        </ul>
+        <div class="card-body-buttom">
+          <a
+            [href]="cripto.link"
+            target="_blank"
+            class="card-link"
+            >View price in real time</a
+          >
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="container   py-5">
-
-    <div class="row g-4" id="principalCards">
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="bitcoin (btc)" >
-              <img  src="/assets/images/icon-bitcoin1.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Bitcoin (BTC)</h5>
-                <p class="card-text">The first decentralized digital currency launched in 2009, using blockchain to ensure secure, transparent transactions with a capped supply of 21 million coins.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Initial Price: <strong>$0.00099</strong> </li>
-                  <li class="list-group-item">Highest price ever: <strong>$109,000</strong></li>
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_parent" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="ethereum (eth)">
-              <img  src="/assets/images/icon-ethereum.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Ethereum (ETH)</h5>
-                <p class="card-text">A blockchain platform introduced in 2015 that supports smart contracts and decentralized apps (DApps), with Ether (ETH) as its native cryptocurrency.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Initial Price: <strong>$0.75</strong> </li>
-                <li class="list-group-item">Highest price ever: <strong>$4,815.01</strong></li>
-
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=BITSTAMP%3AETHUSD" target="_blank" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="solana (sol)">
-              <img  src="/assets/images/icon-solana.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Solana (SOL)</h5>
-                <p class="card-text">A high-performance blockchain platform designed for decentralized applications (DApps) and crypto projects.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Initial Price: <strong>$0.22</strong> </li>
-                <li class="list-group-item">Highest price ever: <strong>$294.33</strong></li>
-
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=BINANCE%3ASOLUSD" target="_blank" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="ripple (xrp)" >
-              <img  src="/assets/images/icon-xrp.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Ripple (XRP)</h5>
-                <p class="card-text">A digital payment protocol and cryptocurrency designed for fast, low-cost international money transfers.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Initial Price: <strong>$0.0058</strong> </li>
-                <li class="list-group-item">Highest price ever: <strong>$3.84</strong></li>
-
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=BINANCE%3AXRPUSD" target="_blank" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="polkadot (dot)" >
-              <img  src="/assets/images/icon-dot.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Polkadot (DOT)</h5>
-                <p class="card-text">A blockchain platform focused on enabling interoperability between different blockchains, enhancing scalability and innovation in decentralized systems.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Initial Price: <strong>$0.29</strong> </li>
-                <li class="list-group-item">Highest price ever: <strong>$53.13</strong></li>
-
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=GEMINI%3ADOTUSD" target="_blank" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-
-      <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card" data-title="litecoin (ltc)" >
-              <img  src="/assets/images/icon-ltc.png" class="img-fluid" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Litecoin (LTC)</h5>
-                <p class="card-text">A cryptocurrency created in 2011 as a faster, more lightweight alternative to Bitcoin, featuring quicker transaction times and lower fees.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Initial Price: <strong>$4.31</strong> </li>
-                <li class="list-group-item">Highest price ever: <strong>$388.80</strong></li>
-
-              </ul>
-              <div class="card-body-buttom">
-                <a href="https://es.tradingview.com/chart/?symbol=KRAKEN%3ALTCUSDH2025" target="_blank" class="card-link">View price in real time</a>
-              </div>
-          </div>
-      </div>
-
-
-    </div>
+</div>

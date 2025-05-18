@@ -11,10 +11,7 @@ import { PortfolioReactComponent } from "./components/portfolio-react/portfolio-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent,
-    FooterComponent,
-    BullishComponent,
-    CompaniesCarrouselComponent,
-    MainOperationsComponent, PortfolioComponent, PortfolioReactComponent],
+    FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
