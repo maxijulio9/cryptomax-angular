@@ -1,0 +1,37 @@
+<div class="container my-4">
+    <form [formGroup]="searchForm" class="input-group input-group-lg">
+        <input type="text" formControlName="searchBar" 
+               placeholder="Enter the cryptocurrency name or symbol"
+               class="form-control py-2 fs-4">
+        <button type="submit"> <i class="bi bi-search fs-3"></i></button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Blockchain</th>
+                <th>Market Cap</th>
+                <th>Current Price</th>
+                <th>Use Case</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr *ngFor="let c of filteredList">
+               
+                <td>{{c.id}}</td>
+                <td>{{c.symbol}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.category}}</td>
+                <td>{{c.blockchain}}</td>
+                <td>{{c.marketCapitalization}}</td>
+                <td>{{c.currentPrice}}</td>
+                <td>{{c.useCase}}</td>
+            
+            </tr>
+        </tbody>
+    </table>
+</div>

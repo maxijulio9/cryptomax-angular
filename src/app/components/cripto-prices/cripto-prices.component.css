@@ -1,0 +1,64 @@
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;  
+    font-size: large;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+table thead {
+    background-color: #69069e58;
+    color: #ffffff;
+}   
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #39d8d316;
+}
+form{
+    width: 50%;
+    align-content: center;
+}
+.input-group input{
+    background-color: rgb(6, 17, 33);
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #39d8d38a;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 80%;
+}
+.input-group input::placeholder{
+    color: rgba(130, 175, 179, 0.667);
+    font-style: italic;
+    font-size: 16px;
+
+  }
+.input-group input:focus{
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(6, 17, 33);
+    color: whitesmoke;
+
+}
+.input-group button{
+    background-color: rgb(6, 17, 33);
+    border: none;
+    color: rgba(245, 245, 245, 0.612);
+    cursor: pointer;
+    border-bottom: 2px solid #39d8d38a;
+    width: 10%;
+}
+.input-group button:hover{
+    background-color: #39d8d375;
+    color: whitesmoke;
+    border-bottom: 2px solid #39d8d3;
+    transition: all 0.3s ease-in-out;
+}

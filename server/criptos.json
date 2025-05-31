@@ -1,0 +1,24 @@
+{
+  "criptos": [
+    {
+      "id": "1",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "category": "Cryptocurrency",
+      "blockchain": "Bitcoin",
+      "marketCapitalization": "800 billion USD",
+      "currentPrice": 3443,
+      "useCase": "Digital Gold"
+    },
+    {
+      "id": "2",
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "category": "Cryptocurrency",
+      "blockchain": "Ethereum",
+      "marketCapitalization": "300 billion USD",
+      "currentPrice": 2500,
+      "useCase": "Smart Contracts"
+    }
+  ]
+}

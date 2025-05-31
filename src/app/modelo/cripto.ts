@@ -1,5 +1,5 @@
 export interface Cripto {
-  id: number;
+  id: string;
   symbol: string;
   name: string;
   category: string;

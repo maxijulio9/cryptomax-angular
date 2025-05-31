@@ -76,9 +76,9 @@ export class BullishComponent implements OnInit {
   }
 
   get filteredCriptos() {
-    const term = this.searchCripto.trim().toLowerCase();
+    const symbol = this.searchCripto.trim().toLowerCase();
     return this.criptos.filter(cripto =>
-      cripto.title.toLowerCase().includes(term) || cripto.symbol.includes(term)
+      cripto.title.toLowerCase().includes(symbol) || cripto.symbol.includes(symbol)
     );
   }
 

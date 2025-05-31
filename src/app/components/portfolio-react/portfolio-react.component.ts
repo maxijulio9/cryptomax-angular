@@ -19,7 +19,7 @@ export class PortfolioReactComponent {
 
   constructor() {
     this.criptoForm = this.formBuilder.group({
-      id: [0],
+      id: ["0"],
       symbol: ['', Validators.required],
       name: ['', Validators.required],
       category: ['', Validators.required],
@@ -33,19 +33,29 @@ export class PortfolioReactComponent {
 
 
   loadCriptos() {
-    this.criptos = this.criptoService.getCriptos();
+
+    this.criptoService.getCriptos().subscribe((criptos: Cripto[]) => {
+      this.criptos = criptos;
+    });
+    // this.criptos = this.criptoService.getCriptos();
   }
 
   onSubmit() {
     if (this.criptoForm.valid) {
       const cripto = this.criptoForm.value;
       if (cripto.id) {
-        this.criptoService.updateCripto(cripto);
+        this.criptoService.updateCripto(cripto).subscribe(() => {
+          this.loadCriptos(); 
+        } );
+        // this.criptoService.updateCripto(cripto);
       } else {
         const newCripto = { ...cripto, id: this.generateId() };
-        this.criptoService.addCripto(newCripto);
+        this.criptoService.addCripto(newCripto).subscribe(() => {
+          this.loadCriptos();
+          this.resetForm();
+        });
+        // this.addCripto(newCripto);
       }
-      
       this.loadCriptos();
       this.resetForm();
     }
@@ -64,16 +74,23 @@ export class PortfolioReactComponent {
     });
   } 
 
-  deleteCripto(id: number) {
-    this.criptoService.deleteCripto(id);
-    this.loadCriptos();
-  }
+  
+  deleteCripto(id: string) {
+    if (confirm('Are you sure to delete this cripto?')) {
+      this.criptoService.deleteCripto(id).subscribe(() =>{
+        this.loadCriptos();
+      }
+      );
+    }
 
+    // this.criptoService.deleteCripto(id);
+    // this.loadCriptos();
+  }
 
 
   resetForm() {
     this.criptoForm.reset({
-      id: 0,
+      id: "0",
       symbol: '',
       name: '',
       category: '',
@@ -84,8 +101,8 @@ export class PortfolioReactComponent {
     });
   } 
 
-  private generateId(): number {
-    return this.criptos.length > 0 ? Math.max(...this.criptos.map(c => c.id)) + 1 : 1;
+  private generateId(): string {
+    return (this.criptos.length > 0 ? Math.max(...this.criptos.map(c => Number(c.id))) + 1 : 1).toString();
   }
 
 

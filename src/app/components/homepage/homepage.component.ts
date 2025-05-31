@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
-  imports: [RouterModule, CompaniesCarrouselComponent, MainOperationsComponent, PortfolioReactComponent, PortfolioComponent, BullishComponent],
+  imports: [RouterModule, CompaniesCarrouselComponent, MainOperationsComponent,  BullishComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })

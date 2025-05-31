@@ -24,7 +24,13 @@
     transition: 1s;
 }
 .card-img-top{
+    filter: invert(0.5);
+}
+.card-img-top:hover{
     filter: invert(1);
+    transition: 1s;
+    size: 1.1em;
+    transform: scale(1.2);
 }
 
 @keyframes pulseShadow {
