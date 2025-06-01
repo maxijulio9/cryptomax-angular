@@ -57,7 +57,7 @@
             </div>
         }
 
-        <label for="message" class="form-label">Use Case:</label>
+        <label for="message" class="form-label">Describe your request:</label>
         <textarea id="message" formControlName="message" class="form-control" rows="3"></textarea>
         @if (formContactUs.get('message')?.invalid ) {
             <div class="invalid-feedback">
@@ -71,8 +71,20 @@
         }
         
         
-        
+       
         <button type="submit" class="button-group" (click)="onSubmit()">Submit</button>
+        @if (formSubmitted) {
+            <div class="alert alert-success mt-3">
+                Your message has been sent successfully!
+               
+                <p>{{ requestHelpList[lastPositionRequestHelp].name}}
+                     {{ requestHelpList[lastPositionRequestHelp].lastName }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].email }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].subject }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].message }}</p>
+               
+            </div>
+        }
         
     
     </form>

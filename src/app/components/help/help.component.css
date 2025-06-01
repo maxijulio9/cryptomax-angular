@@ -1,10 +1,9 @@
 .container{
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 100%;
 }
 .container  h4{
-    color: #c384f7ed;
+    color: #c280f9ed;
     margin-bottom: 4%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -25,23 +24,36 @@
     border: 1px solid #7504f7f0;
     padding: 30px;
     font-size: 25px;
-    background-color: #7504f720;
+    background-color: #5516a245;
     color: #f0ddfffd;
+    
 }
 
 label{
-    color: #e6c7feb6;
+    color: #e6c7fede;
     font-size: 1.3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 2%;
 }
 button{
+    border: 2px solid #3a055e57;
     width: 30%;
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
-    border: 1px solid #0199aa;
-    background-color: #07d0e220;
-    color: #e6c7fefd;
+    background-color: #07d0e200;
+    color: #efe2f8fd;
     font-size: 1.3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top:4% ;
+    margin-top: 4% ;
+    border-bottom: 5px solid #7504f7f0;
 }   
+
+.alert{
+    margin-top: 2%;
+    width: 60%;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #aa017200;
+    color: #1a87e1fd;
+    border: none;
+}

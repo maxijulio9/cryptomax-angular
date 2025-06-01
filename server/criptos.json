@@ -30,5 +30,87 @@
       "currentPrice": 32,
       "useCase": "43dfds"
     }
+  ],
+  "help": [
+    {
+      "id": "1",
+      "name": "Lucía",
+      "lastName": "Martínez",
+      "email": "lucia@example.com",
+      "subject": "Problemas con la app",
+      "message": "No puedo guardar nuevas criptos en mi portafolio."
+    },
+    {
+      "id": "2",
+      "name": "Carlos",
+      "lastName": "Gómez",
+      "email": "carlos.gomez@example.com",
+      "subject": "Sugerencia",
+      "message": "Sería útil agregar gráficos de precios históricos."
+    },
+    {
+      "id": "2054",
+      "name": "dsfsdas",
+      "lastName": "fdsad",
+      "email": "maximilianojavierjulio@gmail.com",
+      "subject": "fsdf",
+      "message": "dfsfds"
+    },
+    {
+      "id": "8390",
+      "name": "Silvia Susanasd",
+      "lastName": "ds",
+      "email": "maximilianojavierjulio@gmail.comds",
+      "subject": "ds",
+      "message": "sd"
+    },
+    {
+      "id": "aad8",
+      "name": "Silvia Susanadsa",
+      "lastName": "ds",
+      "email": "maximilianojavierjulio@gmail.comsda",
+      "subject": "sad",
+      "message": "dsaasdsad"
+    },
+    {
+      "id": "ab09",
+      "name": "asdasd",
+      "lastName": "asd",
+      "email": "das@gmail.com",
+      "subject": "das",
+      "message": "asdasd"
+    },
+    {
+      "id": "fb8a",
+      "name": "Silvia Susanasdf",
+      "lastName": "trdfs",
+      "email": "maximilianojavierjulio@gmail.comfs",
+      "subject": "sdfsd",
+      "message": "sdf"
+    },
+    {
+      "id": "56f1",
+      "name": "Silvia Susanasad",
+      "lastName": "Juliosad",
+      "email": "maximilianojavierjulio@gmasdail.com",
+      "subject": "cambio de maiald",
+      "message": "sda"
+    },
+    {
+      "id": "5f73",
+      "name": "Silvia Susaddsasana",
+      "lastName": "dsadsa",
+      "email": "maximdsailianojavierjulio@gmail.com",
+      "subject": "asdsad",
+      "message": "sadsadasd"
+    },
+    {
+      "id": "6c1f",
+      "name": "wqewqe",
+      "lastName": "wqewqe",
+      "email": "wqeqwd@dsaf.comd",
+      "subject": "wqeqwd@dsaf.comd",
+      "message": "asdasdasdd"
+    }
   ]
 }
