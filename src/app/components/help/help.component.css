@@ -1,0 +1,47 @@
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.container  h4{
+    color: #c384f7ed;
+    margin-bottom: 4%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container input{
+    width: 60%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #7504f7f0;
+    padding: 30px;
+    font-size: 25px;
+    background-color: #7504f720;
+    color: #f0ddfffd;
+}
+.container textarea{
+    width: 60%;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #7504f7f0;
+    padding: 30px;
+    font-size: 25px;
+    background-color: #7504f720;
+    color: #f0ddfffd;
+}
+
+label{
+    color: #e6c7feb6;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0199aa;
+    background-color: #07d0e220;
+    color: #e6c7fefd;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:4% ;
+}   

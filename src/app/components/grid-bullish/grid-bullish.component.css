@@ -2,12 +2,17 @@
     background-color: rgb(6, 17, 33);
     padding: 20px;
 }
-
+.container h1{
+    color: #e0d3f2cf;
+    margin: 2%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .lead{
   font-family: "Arial Narrow";
-  font-size: 1.5rem;
-  color: rgba(169, 169, 169, 0.62);
+  font-size: 2rem;
+  color: rgba(169, 169, 169, 0.796);
 }
 .card {
   flex-direction: column;

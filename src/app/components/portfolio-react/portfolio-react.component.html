@@ -19,7 +19,7 @@
 
         <label for="name" class="form-label">Name:</label>
         <input type="text" id="name" formControlName="name" class="form-control"
-               [ngClass]="{'is-invalid': criptoForm.get('apellido')?.invalid && criptoForm.get('name')?.touched}">
+               [ngClass]="{'is-invalid': criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched}">
         @if (criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched) {
           <div class="invalid-feedback">
             @if (criptoForm.get('name')?.errors?.['required']) {
@@ -74,7 +74,7 @@
                 @if (criptoForm.get('id')?.value) {
                     Update
                 } @else {
-                    Add
+                    Add Cryptocurrency
                 }
                 </button>
             <button type="button" (click)="resetForm()" class="btn btn-secondary m-4">Cancel</button>

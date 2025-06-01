@@ -19,7 +19,7 @@ export class PortfolioReactComponent {
 
   constructor() {
     this.criptoForm = this.formBuilder.group({
-      id: ["0"],
+      id: [""],
       symbol: ['', Validators.required],
       name: ['', Validators.required],
       category: ['', Validators.required],
@@ -43,7 +43,8 @@ export class PortfolioReactComponent {
   onSubmit() {
     if (this.criptoForm.valid) {
       const cripto = this.criptoForm.value;
-      if (cripto.id) {
+      try{
+         if (cripto.id) {
         this.criptoService.updateCripto(cripto).subscribe(() => {
           this.loadCriptos(); 
         } );
@@ -55,6 +56,12 @@ export class PortfolioReactComponent {
           this.resetForm();
         });
         // this.addCripto(newCripto);
+      }
+
+      }
+      catch (error) {
+        console.error('Error al enviar el formulario:', error);
+        return;
       }
       this.loadCriptos();
       this.resetForm();

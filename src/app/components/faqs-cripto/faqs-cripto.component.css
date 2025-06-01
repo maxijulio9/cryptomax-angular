@@ -1,0 +1,38 @@
+.accordion-collapse {
+  display: none;
+}
+
+.accordion-collapse.show {
+  display: block;
+}
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+
+}
+.container h1{
+    color: #e6c7feb6;
+    margin: 2%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.accordion-button{
+    background-color: #5712c6ad;
+    color: #f2e6fbfd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    padding: 25px;
+}
+.accordion-collapse{
+    background-color: #c7abf4ba;
+    color: #250241fd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
