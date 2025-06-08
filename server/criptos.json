@@ -23,7 +23,7 @@
     {
       "id": "3",
       "symbol": "fsdf",
-      "name": "435r4",
+        "name": "435r4",
       "category": "ew",
       "blockchain": "ewr",
       "marketCapitalization": "32",
@@ -63,54 +63,6 @@
       "email": "maximilianojavierjulio@gmail.comds",
       "subject": "ds",
       "message": "sd"
-    },
-    {
-      "id": "aad8",
-      "name": "Silvia Susanadsa",
-      "lastName": "ds",
-      "email": "maximilianojavierjulio@gmail.comsda",
-      "subject": "sad",
-      "message": "dsaasdsad"
-    },
-    {
-      "id": "ab09",
-      "name": "asdasd",
-      "lastName": "asd",
-      "email": "das@gmail.com",
-      "subject": "das",
-      "message": "asdasd"
-    },
-    {
-      "id": "fb8a",
-      "name": "Silvia Susanasdf",
-      "lastName": "trdfs",
-      "email": "maximilianojavierjulio@gmail.comfs",
-      "subject": "sdfsd",
-      "message": "sdf"
-    },
-    {
-      "id": "56f1",
-      "name": "Silvia Susanasad",
-      "lastName": "Juliosad",
-      "email": "maximilianojavierjulio@gmasdail.com",
-      "subject": "cambio de maiald",
-      "message": "sda"
-    },
-    {
-      "id": "5f73",
-      "name": "Silvia Susaddsasana",
-      "lastName": "dsadsa",
-      "email": "maximdsailianojavierjulio@gmail.com",
-      "subject": "asdsad",
-      "message": "sadsadasd"
-    },
-    {
-      "id": "6c1f",
-      "name": "wqewqe",
-      "lastName": "wqewqe",
-      "email": "wqeqwd@dsaf.comd",
-      "subject": "wqeqwd@dsaf.comd",
-      "message": "asdasdasdd"
     }
   ]
 }

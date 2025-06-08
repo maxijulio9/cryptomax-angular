@@ -97,7 +97,7 @@
             </tr>
         </thead>
         <tbody>
-        @for (a of criptos; track a.id) {
+        @for (a of criptosEmptyList; track a.id) {
             <tr>
             <td>{{ a.id }}</td>
             <td>{{ a.symbol }}</td>
@@ -111,6 +111,11 @@
                 <button (click)="updateCripto(a)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
                 <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>
             </td>
+            </tr>
+        }@empty {
+            <tr>
+                <td colspan="9" class="text-center">Unfortunately you still do not have any cryptocurrency registered :((
+ </td>
             </tr>
         }
         </tbody>

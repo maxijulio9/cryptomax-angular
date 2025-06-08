@@ -14,6 +14,8 @@ export class PortfolioReactComponent {
   private criptoService = inject(CriptoService);
   private formBuilder = inject(FormBuilder);
 
+  criptosEmptyList: Cripto[] = [];
+
   criptos: Cripto[] = [];
   criptoForm: FormGroup;
 
