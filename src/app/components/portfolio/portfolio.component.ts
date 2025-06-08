@@ -27,6 +27,7 @@ export class PortfolioComponent {
     name: '',
     marketCapitalization: '',
     currentPrice: 0,
+    company: ''
     } ;
   
   constructor() {
@@ -71,6 +72,7 @@ export class PortfolioComponent {
       name: '',
       marketCapitalization: '',
       currentPrice: 0,
+      company: '' 
     };
 
     if (form) {

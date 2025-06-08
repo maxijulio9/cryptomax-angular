@@ -11,7 +11,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 4rem;
   color: #bd7ef8b0;
-  border-top: 10px groove #5c00c2;
+  border-top: 10px groove #2ac200;
 }
 table {
   font-family: arial, sans-serif;
@@ -71,7 +71,7 @@ tr td .btn.add{
 }
 label{
   font-size: 1.2rem;
-  color: #b1fcfcb0;
+  color: #d9e1d6e2;
   margin-bottom: 0.5rem;
 }
 
@@ -131,7 +131,7 @@ form {
   background-color: #4d1d69;
   color: white;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem 2rem;
 }
 

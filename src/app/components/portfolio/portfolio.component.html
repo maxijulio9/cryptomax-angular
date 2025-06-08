@@ -68,6 +68,11 @@
           </div>
         }
       </div>
+      <div class="col-12 mb-3">
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company"
+               [(ngModel)]="selectedCripto.company" class="form-control"> 
+      </div>
 
       
 
@@ -93,6 +98,7 @@
           <th>Name</th>
           <th>Market Capitalization</th>
           <th>Current Price</th>
+          <th>Company</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -104,12 +110,13 @@
             <td>{{ a.name }}</td>
             <td>{{ a.marketCapitalization }}</td>
             <td>{{ a.currentPrice }}</td>
+            <td>{{ a.company }}</td>
             <td>
               <button (click)="updateCripto(a, criptoForm)" class="btn btn-sm btn-primary me-1">
                 <i class="bi bi-pencil"></i>
               </button>
               <button (click)="deleteCripto(a.id)" class="btn btn-sm btn-secondary">
-                <i class="bi bi-trash">ff</i>
+                <i class="bi bi-trash"></i>
               </button>
             </td>
           </tr>

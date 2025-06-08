@@ -23,7 +23,7 @@ table th, table td {
     background-color: #39d8d316;
 }
 table .price-row{
-    background-color: #42068635;
+    background-color: #5e07c27f;
 }
 .price-row{
     color: #5aed1bfb;
@@ -80,4 +80,11 @@ form{
     margin: 0 5px;
     background-color: #6617c744;
     border: 2px solid #57de0866;
+}
+
+.page-item.active .page-link {
+    background-color: #05cd08;
+    color: rgb(56, 56, 56); 
+    border: 2px solid #5aed1bfb; 
+    font-weight: bold; 
 }

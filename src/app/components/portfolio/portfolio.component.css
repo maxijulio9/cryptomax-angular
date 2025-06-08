@@ -60,7 +60,7 @@ tr .btn.delete {
 }
 
 tr .btn.delete:hover {
-  background-color: rgba(177, 0, 53, 0.801);
+  background-color: rgba(233, 5, 73, 0.801);
   color: #dda2a2;
   border-bottom: 2px solid #fa1515;
 }

@@ -4,29 +4,17 @@
       "id": "1",
       "symbol": "BTC",
       "name": "Bitcoin",
-      "category": "Cryptocurrency",
-      "blockchain": "Bitcoin",
       "marketCapitalization": "800 billion USD",
       "currentPrice": 3443,
-      "useCase": "Digital Gold"
+      "company": "ripio"
     },
     {
       "id": "2",
       "symbol": "ETH",
       "name": "Ethereum",
-      "category": "Cryptocurrency",
-      "blockchain": "Ethereum",
       "marketCapitalization": "300 billion USD",
       "currentPrice": 2500,
-      "useCase": "Smart Contracts"
-    },
-    {
-      "id": "3",
-      "symbol": "eer",
-      "name": "erer",
-      "marketCapitalization": "erre",
-      "currentPrice": 23322,
-      "company": "2fwe"
+      "company": "lemon"
     }
   ]
 }

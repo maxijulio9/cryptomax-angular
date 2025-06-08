@@ -76,6 +76,7 @@
                 <th>Name</th>
                 <th>Market Capitalization</th>
                 <th>Current Price</th>
+                <th>Company</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -87,6 +88,7 @@
             <td>{{ a.name }}</td>
             <td>{{ a.marketCapitalization }}</td>
             <td>{{ a.currentPrice }}</td>
+            <td>{{ a.company }}</td>
             <td>
                 <button (click)="updateCripto(a)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
                 <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>
