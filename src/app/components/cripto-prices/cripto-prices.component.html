@@ -10,28 +10,41 @@
             <tr>
                 <th>Id</th>
                 <th>Symbol</th>
+                <th class="price">Current Price</th>
                 <th>Name</th>
-                <th>Category</th>
-                <th>Blockchain</th>
                 <th>Market Cap</th>
-                <th>Current Price</th>
-                <th>Use Case</th>
             </tr>
         </thead>
         <tbody>
         
-            <tr *ngFor="let c of filteredList">
+            <tr *ngFor="let c of paginatedList">
                
                 <td>{{c.id}}</td>
                 <td>{{c.symbol}}</td>
+                <td  class="price-row">{{c.currentPrice}}</td>
                 <td>{{c.name}}</td>
-                <td>{{c.category}}</td>
-                <td>{{c.blockchain}}</td>
                 <td>{{c.marketCapitalization}}</td>
-                <td>{{c.currentPrice}}</td>
-                <td>{{c.useCase}}</td>
+                
             
             </tr>
         </tbody>
     </table>
+
+     <nav *ngIf="totalPages > 1" class="mt-4">
+    <ul class="pagination justify-content-center">
+        
+        <li class="page-item" [class.disabled]="currentPage === 1">
+            <button class="page-link" (click)="changePage(currentPage - 1)">«</button>
+        </li>
+        <li class="page-item"
+            *ngFor="let page of [].constructor(totalPages); let i = index"
+            [class.active]="currentPage === i + 1">
+        <button class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</button>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <button class="page-link" (click)="changePage(currentPage + 1)">»</button>
+      </li>
+    </ul>
+  </nav>      
+
 </div>

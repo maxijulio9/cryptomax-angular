@@ -18,9 +18,16 @@ table thead {
 }   
 table th, table td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     background-color: #39d8d316;
+}
+table .price-row{
+    background-color: #42068635;
+}
+.price-row{
+    color: #5aed1bfb;
+    font-weight: bold;
 }
 form{
     width: 50%;
@@ -61,4 +68,16 @@ form{
     color: whitesmoke;
     border-bottom: 2px solid #39d8d3;
     transition: all 0.3s ease-in-out;
+}
+
+
+.page-link {
+    color: #5aed1bfb;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #6617c744;
+    border: 2px solid #57de0866;
 }

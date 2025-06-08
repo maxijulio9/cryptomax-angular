@@ -19,6 +19,14 @@
       "marketCapitalization": "300 billion USD",
       "currentPrice": 2500,
       "useCase": "Smart Contracts"
+    },
+    {
+      "id": "3",
+      "symbol": "eer",
+      "name": "erer",
+      "marketCapitalization": "erre",
+      "currentPrice": 23322,
+      "company": "2fwe"
     }
   ]
 }

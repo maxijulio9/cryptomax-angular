@@ -28,20 +28,7 @@
           </div>
         }
 
-        <label for="category" class="form-label">Category:</label>
-        <input type="text" id="category" formControlName="category" class="form-control"
-               [ngClass]="{'is-invalid': criptoForm.get('category')?.invalid && criptoForm.get('category')?.touched}">
-        @if (criptoForm.get('category')?.invalid && criptoForm.get('category')?.touched) {
-          <div class="invalid-feedback">
-            @if (criptoForm.get('category')?.errors?.['required']) {
-              The category is required.
-            }
-          </div>
-        }
-
-        <label for="blockchain" class="form-label">Blockchain:</label>
-        <input type="text" id="blockchain" formControlName="blockchain" class="form-control">
-
+       
         <label for="marketCapitalization" class="form-label">Market Capitalization:</label>
         <input type="text" id="marketCapitalization" formControlName="marketCapitalization" class="form-control"
                [ngClass]="{'is-invalid': criptoForm.get('marketCapitalization')?.invalid && criptoForm.get('marketCapitalization')?.touched}">
@@ -65,9 +52,8 @@
           </div>
         }
 
-        <label for="useCase" class="form-label">Use Case:</label>
-        <textarea id="useCase" formControlName="useCase" class="form-control" rows="3"></textarea>
-
+        <label for="company" class="form-label">Company:</label>
+        <input type="text" id="company" formControlName="company" class="form-control">
 
         <div class="button-group">
             <button type="submit" [disabled]="criptoForm.invalid" class="btn btn-primary m-4">
@@ -88,11 +74,8 @@
                 <th>Id</th>
                 <th>Symbol</th>
                 <th>Name</th>
-                <th>Category</th>
-                <th>Blockchain</th>
                 <th>Market Capitalization</th>
                 <th>Current Price</th>
-                <th>Use Case</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -102,11 +85,8 @@
             <td>{{ a.id }}</td>
             <td>{{ a.symbol }}</td>
             <td>{{ a.name }}</td>
-            <td>{{ a.category }}</td>
-            <td>{{ a.blockchain }}</td>
             <td>{{ a.marketCapitalization }}</td>
             <td>{{ a.currentPrice }}</td>
-            <td>{{ a.useCase }}</td>
             <td>
                 <button (click)="updateCripto(a)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
                 <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>

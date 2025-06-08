@@ -19,14 +19,12 @@ export class PortfolioReactComponent {
 
   constructor() {
     this.criptoForm = this.formBuilder.group({
-      id: ["0"],
+      id: [""],
       symbol: ['', Validators.required],
       name: ['', Validators.required],
-      category: ['', Validators.required],
-      blockchain: [null],
       marketCapitalization: ['', Validators.required],
-      currentPrice: [0],
-      useCase: [null]
+      currentPrice: [],
+      company: ['']
     });
     this.loadCriptos();
   }
@@ -66,11 +64,9 @@ export class PortfolioReactComponent {
       id: cripto.id,
       symbol: cripto.symbol,
       name: cripto.name,
-      category: cripto.category,
-      blockchain: cripto.blockchain,
       marketCapitalization: cripto.marketCapitalization,
       currentPrice: cripto.currentPrice,
-      useCase: cripto.useCase
+      company: cripto.company || ''
     });
   } 
 
@@ -90,14 +86,12 @@ export class PortfolioReactComponent {
 
   resetForm() {
     this.criptoForm.reset({
-      id: "0",
+      id: "",
       symbol: '',
       name: '',
-      category: '',
-      blockchain: '',
       marketCapitalization: '',
       currentPrice: 0,
-      useCase: ''
+      company: ''
     });
   } 
 

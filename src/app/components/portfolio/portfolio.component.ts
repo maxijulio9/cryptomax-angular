@@ -22,14 +22,11 @@ export class PortfolioComponent {
 
 
   selectedCripto: Cripto = {
-    id:"0",
+    id:"",
     symbol: '',
     name: '',
-    category: '',
-    blockchain: '',
     marketCapitalization: '',
     currentPrice: 0,
-    useCase: '',
     } ;
   
   constructor() {
@@ -69,14 +66,11 @@ export class PortfolioComponent {
 
   resetForm(form: NgForm) {
     this.selectedCripto = {
-      id:"0",
+      id:"",
       symbol: '',
       name: '',
-      category: '',
-      blockchain: '',
       marketCapitalization: '',
       currentPrice: 0,
-      useCase: '',
     };
 
     if (form) {
