@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Checkout our FAQs ₿</h1>
+  <div class="accordion">
+    <div *ngFor="let faq of faqs; index as i" class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" (click)="toggleFaqs(i)">
+          {{ faq.question }}
+        </button>
+      </h2>
+      <div class="accordion-collapse" [ngClass]="{'show': faq.isOpen}">
+        <div class="accordion-body">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

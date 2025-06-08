@@ -1,0 +1,92 @@
+<app-faqs-cripto>   </app-faqs-cripto>
+<div class="container">
+    <h2>Do have more questions? </h2>
+    <h4>Feel free to contact us </h4>
+    <form [formGroup]="formContactUs">
+        <label for="name">Enter your name</label>
+        <input type="text" id="name" formControlName="name" class="form-control"
+            [ngClass]="{'is-invalid': formContactUs.get('name')?.invalid 
+             && formContactUs.get('name')?.touched}">
+        @if (formContactUs.get('name')?.invalid ) {
+            <div class="invalid-feedback">
+                @if (formContactUs.get('name')?.errors?.['required']) {
+                    The name is required.
+                }
+            </div>
+        }
+
+         <label for="lastName">Enter your Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName" class="form-control"
+            [ngClass]="{'is-invalid': formContactUs.get('lastName')?.invalid 
+             && formContactUs.get('lastName')?.touched}">
+        @if (formContactUs.get('lastName')?.invalid ) {
+            <div class="invalid-feedback">
+                @if (formContactUs.get('lastName')?.errors?.['required']) {
+                    The Last Name is required.
+                }
+            </div>
+        }
+        
+
+         <label for="email">Enter your email</label>
+        <input type="text" id="email" formControlName="email" class="form-control"
+            [ngClass]="{'is-invalid': formContactUs.get('email')?.invalid 
+             && formContactUs.get('email')?.touched}">
+        @if (formContactUs.get('email')?.invalid ) {
+            <div class="invalid-feedback">
+                @if (formContactUs.get('email')?.errors?.['required']) {
+                    The email is required.
+                }
+                @if (formContactUs.get('email')?.errors?.['email']) {
+                    The email is not valid. Make sure you enter a valid email address.
+                }
+            </div>
+        }
+        <label for="subject">Summary your question</label>
+        <input type="text" id="subject" formControlName="subject" class="form-control"
+            [ngClass]="{'is-invalid': formContactUs.get('subject')?.invalid 
+             && formContactUs.get('subject')?.touched}">
+        @if (formContactUs.get('subject')?.invalid ) {
+            <div class="invalid-feedback">
+                @if (formContactUs.get('subject')?.errors?.['required']) {
+                    The email is required.
+                }
+                @if (formContactUs.get('subject')?.errors?.['subject']) {
+                    The email is not valid. Make sure you enter a valid email address.
+                }
+            </div>
+        }
+
+        <label for="message" class="form-label">Describe your request:</label>
+        <textarea id="message" formControlName="message" class="form-control" rows="3"></textarea>
+        @if (formContactUs.get('message')?.invalid ) {
+            <div class="invalid-feedback">
+                @if (formContactUs.get('message')?.errors?.['required']) {
+                    The email is required.
+                }
+                @if (formContactUs.get('message')?.errors?.['message']) {
+                    The email is not valid. Make sure you enter a valid email address.
+                }
+            </div>
+        }
+        
+        
+       
+        <button type="submit" class="button-group" (click)="onSubmit()">Submit</button>
+        @if (formSubmitted) {
+            <div class="alert alert-success mt-3">
+                Your message has been sent successfully!
+               
+                <p>{{ requestHelpList[lastPositionRequestHelp].name}}
+                     {{ requestHelpList[lastPositionRequestHelp].lastName }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].email }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].subject }} 
+                     - {{ requestHelpList[lastPositionRequestHelp].message }}</p>
+               
+            </div>
+        }
+        
+    
+    </form>
+</div>
+

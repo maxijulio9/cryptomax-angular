@@ -15,6 +15,58 @@
       "marketCapitalization": "300 billion USD",
       "currentPrice": 2500,
       "company": "lemon"
+    },
+    {
+      "id": "3",
+      "symbol": "fsdf",
+      "name": "435r4",
+      "category": "ew",
+      "blockchain": "ewr",
+      "marketCapitalization": "32",
+      "currentPrice": 32,
+      "useCase": "43dfds"
+    }
+  ],
+  "help": [
+    {
+      "id": "1",
+      "name": "Lucía",
+      "lastName": "Martínez",
+      "email": "lucia@example.com",
+      "subject": "Problemas con la app",
+      "message": "No puedo guardar nuevas criptos en mi portafolio."
+    },
+    {
+      "id": "2",
+      "name": "Carlos",
+      "lastName": "Gómez",
+      "email": "carlos.gomez@example.com",
+      "subject": "Sugerencia",
+      "message": "Sería útil agregar gráficos de precios históricos."
+    },
+    {
+      "id": "2054",
+      "name": "dsfsdas",
+      "lastName": "fdsad",
+      "email": "maximilianojavierjulio@gmail.com",
+      "subject": "fsdf",
+      "message": "dfsfds"
+    },
+    {
+      "id": "8390",
+      "name": "Silvia Susanasd",
+      "lastName": "ds",
+      "email": "maximilianojavierjulio@gmail.comds",
+      "subject": "ds",
+      "message": "sd"
+    },
+    {
+      "id": "eef5",
+      "name": "Maximilianop",
+      "lastName": "Julioo",
+      "email": "maximilianojavierjulio@gmail.comm",
+      "subject": "Need more info",
+      "message": "Just adding a content "
     }
   ]
 }

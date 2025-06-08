@@ -19,7 +19,7 @@
 
         <label for="name" class="form-label">Name:</label>
         <input type="text" id="name" formControlName="name" class="form-control"
-               [ngClass]="{'is-invalid': criptoForm.get('apellido')?.invalid && criptoForm.get('name')?.touched}">
+               [ngClass]="{'is-invalid': criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched}">
         @if (criptoForm.get('name')?.invalid && criptoForm.get('name')?.touched) {
           <div class="invalid-feedback">
             @if (criptoForm.get('name')?.errors?.['required']) {
@@ -60,7 +60,7 @@
                 @if (criptoForm.get('id')?.value) {
                     Update
                 } @else {
-                    Add
+                    Add Cryptocurrency
                 }
                 </button>
             <button type="button" (click)="resetForm()" class="btn btn-secondary m-4">Cancel</button>
@@ -81,7 +81,7 @@
             </tr>
         </thead>
         <tbody>
-        @for (a of criptos; track a.id) {
+        @for (a of criptosEmptyList; track a.id) {
             <tr>
             <td>{{ a.id }}</td>
             <td>{{ a.symbol }}</td>
@@ -93,6 +93,11 @@
                 <button (click)="updateCripto(a)" class="btn btn-sm"><i class="bi bi-pencil"></i></button>
                 <button (click)="deleteCripto(a.id)" class="btn delete btn-sm"><i class="bi bi-trash"></i></button>
             </td>
+            </tr>
+        }@empty {
+            <tr>
+                <td colspan="9" class="text-center">Unfortunately you still do not have any cryptocurrency registered :((
+ </td>
             </tr>
         }
         </tbody>
