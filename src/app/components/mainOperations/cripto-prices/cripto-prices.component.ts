@@ -40,17 +40,16 @@ export class CriptoPricesComponent implements OnInit {
         currentPrice:`${(item as any).current_price?.toLocaleString() ?? 'N/A'} USD`
       }));
 
-      this.filteredList = this.criptos;
+       this.filteredList = this.criptos;
+      this.updatePaginatedList();
     });
     
-    this.filteredList = this.criptos;
-    this.updatePaginatedList();
 
     this.searchForm.get('searchBar')?.valueChanges.subscribe(value => {
       this.filterCriptos(value);
     });
   
-}
+  }
 
   filterCriptos(searchText: string): void {
     const lowerText = searchText.toLowerCase();

@@ -9,7 +9,7 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class ChartComponent implements AfterViewInit {
   //RESIVAR!!!
-  cryptos = [
+  criptos = [
     { id: 'widget-btc', symbol: 'BINANCE:BTCUSDT', name: 'Bitcoin' },
     { id: 'widget-eth', symbol: 'BINANCE:ETHUSDT', name: 'Ethereum' },
     { id: 'widget-sol', symbol: 'BINANCE:SOLUSDT', name: 'Solana' },
@@ -19,8 +19,8 @@ export class ChartComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit(): void {
-    this.cryptos.forEach(crypto => {
-      this.loadWidget(crypto.id, crypto.symbol);
+    this.criptos.forEach(cripto => {
+      this.loadWidget(cripto.id, cripto.symbol);
     });
   }
 
