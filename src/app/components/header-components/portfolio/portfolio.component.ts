@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Injectable } from '@angular/core';
-import { CriptoService } from '../../service/critpto-service.service';
+import { CriptoService } from '../../../service/critpto-service.service';
 
-import { Cripto } from '../../modelo/cripto';
+import { Cripto } from '../../../modelo/cripto';
 
 @Component({
   selector: 'app-portfolio',

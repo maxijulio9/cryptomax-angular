@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { FaqsCriptoComponent } from "../faqs-cripto/faqs-cripto.component";
 import { Form, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HelpServiceService } from '../../service/help-service.service';
-import { HelpRequest } from '../../modelo/requests';
+import { HelpServiceService } from '../../../service/help-service.service';
+import { HelpRequest } from '../../../modelo/requests';
 import { waitForAsync } from '@angular/core/testing';
 
 

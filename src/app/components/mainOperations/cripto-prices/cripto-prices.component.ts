@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Cripto } from '../../modelo/cripto';
+import { Cripto } from '../../../modelo/cripto';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CriptoServiceApiService } from '../../service/cripto-service-api.service';
+import { CriptoServiceApiService } from '../../../service/cripto-service-api.service';
 
 
 @Component({

@@ -14,17 +14,15 @@
       "name": "Ethereum",
       "marketCapitalization": "300 billion USD",
       "currentPrice": 2500,
-      "company": "lemon"
+      "company": "lemon cash"
     },
     {
       "id": "3",
-      "symbol": "fsdf",
-      "name": "435r4",
-      "category": "ew",
-      "blockchain": "ewr",
-      "marketCapitalization": "32",
-      "currentPrice": 32,
-      "useCase": "43dfds"
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "marketCapitalization": "449990000",
+      "currentPrice": 0.99,
+      "company": "ripio"
     }
   ],
   "help": [

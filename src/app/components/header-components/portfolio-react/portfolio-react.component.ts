@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CriptoService } from '../../service/critpto-service.service';
-import { Cripto } from '../../modelo/cripto';
+import { CriptoService } from '../../../service/critpto-service.service';
+import { Cripto } from '../../../modelo/cripto';
 import { CommonModule } from '@angular/common';
 
 @Component({
