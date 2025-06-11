@@ -25,11 +25,9 @@ export class PortfolioComponent {
     id:"",
     symbol: '',
     name: '',
-    category: '',
-    blockchain: '',
     marketCapitalization: '',
     currentPrice: 0,
-    useCase: '',
+    company: ''
     } ;
   
   constructor() {
@@ -72,11 +70,9 @@ export class PortfolioComponent {
       id:"",
       symbol: '',
       name: '',
-      category: '',
-      blockchain: '',
       marketCapitalization: '',
       currentPrice: 0,
-      useCase: '',
+      company: '' 
     };
 
     if (form) {

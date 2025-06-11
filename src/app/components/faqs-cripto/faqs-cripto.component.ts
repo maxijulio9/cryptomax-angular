@@ -20,13 +20,13 @@ export class FaqsCriptoComponent {
       isOpen: false
     },
     {
-      question: 'How can I reset my password?',
-      answer: "If you forget your password, you can reset it by clicking on the 'Forgot Password?' link on the login page.",
+      question: 'Is the prices cryptocurrencies page updated in real time?',
+      answer: "Yes, you can find the latest prices of cryptocurrencies on our 'Prices' page, which is updated in real time.",
       isOpen: false
     },
     {
       question: 'What cryptocurrencies are supported?',
-      answer: 'Crypto Max supports a wide range of cryptocurrencies including Bitcoin, Ethereum, Ripple, and many others. You can view the full list on our supported cryptocurrencies page.',
+      answer: 'Crypto Max supports a wide range of cryptocurrencies including Bitcoin, Ethereum, Ripple, and many others. You can view the full list on our prices cryptocurrencies page.',
       isOpen: false
     },
     { 
@@ -36,7 +36,7 @@ export class FaqsCriptoComponent {
     },
     {
       question: 'Is there a mobile app available?',
-      answer: 'Yes, Crypto Max has a mobile app available for both iOS and Android devices. You can download it from the App Store or Google Play.',
+      answer: 'Unfortunately, we do not have a mobile app at the moment, but our website is fully responsive and can be accessed on mobile devices.',
       isOpen: false
     }
   ];

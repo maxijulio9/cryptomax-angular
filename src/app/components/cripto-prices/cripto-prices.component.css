@@ -1,13 +1,10 @@
 .container {
-    min-height: 40vh; /* Garantiza una altura mínima en pantallas pequeñas */
-    max-height: 80vh; /* Evita que el contenedor crezca demasiado */
-    overflow: auto; /* Agrega scroll si el contenido excede la altura */
+  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2%;
     box-sizing: border-box;
 }
 
@@ -24,9 +21,16 @@ table thead {
 }   
 table th, table td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     background-color: #39d8d316;
+}
+table .price-row{
+    background-color: #1301277f;
+}
+.price-row{
+    color: #50fd05;
+    font-weight: bold;
 }
 form{
     width: 50%;
@@ -70,4 +74,24 @@ form{
     color: whitesmoke;
     border-bottom: 2px solid #39d8d3;
     transition: all 0.3s ease-in-out;
+}
+
+
+.page-link {
+    color: #8bed62fb;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #11022244;
+    border: 1px solid #57de0866;
+    box-shadow: 1px 1px 10px rgba(135, 2, 192, 0.912);
+}
+
+.page-item.active .page-link {
+    background-color: #05cd08;
+    color: rgb(56, 56, 56); 
+    border: 2px solid #5aed1bfb; 
+    font-weight: bold; 
 }

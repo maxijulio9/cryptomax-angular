@@ -9,7 +9,7 @@
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 4rem;
-  color: #59b7beb0;
+  color: #40e405c4;
   border-top: 5px groove #5c00c2;
 }
 
@@ -60,7 +60,7 @@ tr .btn.delete {
 }
 
 tr .btn.delete:hover {
-  background-color: rgba(177, 0, 53, 0.801);
+  background-color: rgba(233, 5, 73, 0.801);
   color: #dda2a2;
   border-bottom: 2px solid #fa1515;
 }
