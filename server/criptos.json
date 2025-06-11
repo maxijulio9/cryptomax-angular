@@ -4,26 +4,22 @@
       "id": "1",
       "symbol": "BTC",
       "name": "Bitcoin",
-      "category": "Cryptocurrency",
-      "blockchain": "Bitcoin",
       "marketCapitalization": "800 billion USD",
       "currentPrice": 3443,
-      "useCase": "Digital Gold"
+      "company": "ripio"
     },
     {
       "id": "2",
       "symbol": "ETH",
       "name": "Ethereum",
-      "category": "Cryptocurrency",
-      "blockchain": "Ethereum",
       "marketCapitalization": "300 billion USD",
       "currentPrice": 2500,
-      "useCase": "Smart Contrgdfgdfgdfg"
+      "company": "lemon"
     },
     {
       "id": "3",
       "symbol": "fsdf",
-        "name": "435r4",
+      "name": "435r4",
       "category": "ew",
       "blockchain": "ewr",
       "marketCapitalization": "32",
@@ -46,7 +42,7 @@
       "lastName": "Gómez",
       "email": "carlos.gomez@example.com",
       "subject": "Sugerencia",
-      "message": "Sería útil agregar gráficos de precios históricos."
+      "message": "Seria util agregar gráficos de precios históricos."
     },
     {
       "id": "2054",
@@ -63,6 +59,22 @@
       "email": "maximilianojavierjulio@gmail.comds",
       "subject": "ds",
       "message": "sd"
+    },
+    {
+      "id": "eef5",
+      "name": "Maximilianop",
+      "lastName": "Julioo",
+      "email": "maximilianojavierjulio@gmail.comm",
+      "subject": "Need more info",
+      "message": "Just adding a content "
+    },
+    {
+      "id": "6025",
+      "name": "MAXix",
+      "lastName": "MUSK",
+      "email": "amx@spacex.com",
+      "subject": "testing",
+      "message": "Launch to the moon"
     }
   ]
 }
